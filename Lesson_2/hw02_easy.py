@@ -15,12 +15,33 @@
 # с помощью числа определяем ширину поля слева
 
 
+fruits = ["apple", "kiwi", "pear", "banana"]
+length = len(fruits)
+for index, value in enumerate(fruits):
+    print(index, '{:>10}'.format(value))
+
 # Задача-2:
 # Даны два произвольные списка.
 # Удалите из первого списка элементы, присутствующие во втором списке.
 
+list_1 = [1, 2, 3, 4]
+list_2 = [1, 3, 6, 7]
+difference = list(set(list_1)-set(list_2))
+list_1 = difference
+print(list_1, list_2)
 
 # Задача-3:
 # Дан произвольный список из целых чисел.
 # Получите НОВЫЙ список из элементов исходного, выполнив следующие условия:
 # если элемент кратен двум, то разделить его на 4, если не кратен, то умножить на два.
+
+
+my_list = [1, 2, 3, 4, 5, 6]
+new_list = []
+i = len(my_list)
+for value in range(i):
+    if my_list[value]%2==0:
+        new_list.append(my_list[value]/4)
+    else:
+        new_list.append(my_list[value]*2)
+print(new_list)
