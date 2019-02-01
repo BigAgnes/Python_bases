@@ -4,6 +4,12 @@
 # Т.е. из строки "mtMmEZUOmcq" нужно получить ['mt', 'm', 'mcq']
 # Решить задачу двумя способами: с помощью re и без.
 
+#Решение с re:
+import re
+stroke = "mtMmEZUOmcq"
+found = re.findall(r'[a-z]+', stroke)
+print(found)
+
 
 
 # Задание-2:

@@ -6,13 +6,19 @@
 # квадратами элементов исходного списка
 # [0, 1, 2, 3] --> [0, 1, 4, 9]
 
+lst = [0, 1, 2, 3]
+new_lst = [el**2 for el in lst]
+print("Получен новый список:", new_lst)
 
 
 # Задание-2:
 # Даны два списка фруктов.
 # Получить список фруктов, присутствующих в обоих исходных списках.
 
-
+fruits = ["banana", "apple", "orange", "kiwi"]
+fruits1 = ["peach", "banana", "pear", "apple"]
+new_fruits = [value for value in fruits if value == value in fruits1]
+print (new_fruits)
 
 # Задание-3:
 # Дан список, заполненный произвольными числами.
@@ -20,6 +26,14 @@
 # + Элемент кратен 2
 # + Элемент неотрицательный
 # + Элемент не кратен 3
+
+numbers = [1, 3, 6, 7, -9, 2, -11]
+new_numbers = [el for el in numbers if (el % 2 == 0) and (el > 0) and (el % 3 != 0)]
+print (new_numbers)
+
+
+
+
 
 
 
