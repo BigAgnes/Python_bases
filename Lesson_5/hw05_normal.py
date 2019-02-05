@@ -15,9 +15,36 @@
 # и импортированные в данный файл из easy.py
 # ИСПОЛЬЗОВАТЬ МОДУЛЬ OS и SHUTIL
 
-
-
-
+import os
+import shutil
+number ='i'
+while number != '0':
+    print("1. Перейти в папку")
+    print("2. Просмотреть содержимое текущей папки")
+    print("3. Удалить папку")
+    print("4. Создать папку")
+    print("Для выхода нажмите 0")
+    number = input('Выбрать: ')
+    print(number)
+    if number == '1':
+        dir_name = input ("Введите имя папки:")
+        os.chdir(dir_name)
+        print("Вы находитесь в папке", dir_name)
+    elif number == '2':
+        dir_name = os.getcwd()
+        print(os.listdir(dir_name))
+    elif number == '3':
+        dir_name = input("Введите имя папки:")
+        os.removedirs(dir_name)
+        print("Папка {} успешно удалена.".format (dir_name))
+    elif number == '4':
+        dir_name = input("Введите имя папки:")
+        os.mkdir(dir_name)
+        print("Папка {} успешно создана.".format (dir_name))
+    elif number == '0':
+        pass
+    else:
+        print("Введите существующий пункт:")
 
 
 
